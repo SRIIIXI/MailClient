@@ -55,12 +55,12 @@ MailView::MailView(QWidget *parent) : QWidget(parent)
     lstAttachments.setVisible(false);
 
 	layout.setSpacing(0);
-	layout.setMargin(5);
+    layout.setContentsMargins(5, 5, 5, 5);
 	mainLayout.addLayout(&layout);
 	mainLayout.addWidget(&viewer);
 	mainLayout.addWidget(&lstAttachments);
 	mainLayout.setSpacing(0);
-	mainLayout.setMargin(0);
+    mainLayout.setContentsMargins(0, 0, 0, 0);
 	setLayout(&mainLayout);
  }
 

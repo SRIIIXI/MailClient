@@ -48,6 +48,7 @@ set(project_sources
 ./sources/AddressBookWindow.cpp
 ./sources/Tasks.cpp
 ./sources/MailClient.cpp
+./sources/sqlite3.c
 ./sources/main.cpp
 )
 
@@ -90,6 +91,8 @@ set(project_headers
 ./include/AddressBookWindow.h
 ./include/Tasks.h
 ./include/MailClient.h
+./include/sqlite3.h
+./include/sqlite3ext.h
 )
 
 set(project_resources 

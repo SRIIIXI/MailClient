@@ -25,7 +25,7 @@ ContactsView::ContactsView(QWidget *parent) : QDialog(parent)
     btnOK.setText("OK");
     btnCancel.setText("Cancel");
 
-    mainLayout.setMargin(5);
+    mainLayout.setContentsMargins(5, 5, 5, 5);
 
     setLayout(&mainLayout);
 

@@ -265,8 +265,10 @@ bool TcpClient::ConnectSocket(int &returncode)
 
 	if (implStructPtr->requireSSL)
 	{
-		if (SSL_connect(implStructPtr->SSLSession) != 1)
+        returncode = SSL_connect(implStructPtr->SSLSession);
+        if (returncode != 1)
 		{
+            int err = SSL_get_error(implStructPtr->SSLSession, returncode);
 			SSL_free(implStructPtr->SSLSession);
 			shutdown(implStructPtr->socketFd, 2);
 			closesocket(implStructPtr->socketFd);

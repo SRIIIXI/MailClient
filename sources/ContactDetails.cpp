@@ -236,7 +236,7 @@ void ContactDetails::SetRecord(const Contact &rec)
 	if (pixBase64.length() > 0)
 	{
 		QByteArray base64buff;
-		base64buff.append(pixBase64);
+        base64buff.append(pixBase64.toStdString().c_str(), pixBase64.toStdString().length());
 		QByteArray by = QByteArray::fromBase64(base64buff);
 		image = QImage::fromData(by, "PNG");
 

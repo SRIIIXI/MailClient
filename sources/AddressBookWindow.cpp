@@ -225,8 +225,8 @@ void AddressBookWindow::eventImportEntries()
 
 				//Header positions - START
 				if (lineno == 0)
-				{
-					QStringList fields = line.split(',', QString::KeepEmptyParts);
+                {
+                    QStringList fields = line.split(',', Qt::KeepEmptyParts);
 
 					int fieldno = 0;
 
@@ -261,7 +261,7 @@ void AddressBookWindow::eventImportEntries()
 				}
 				//Header positions - END
 
-				QStringList fieldvalues = line.split(',', QString::KeepEmptyParts);
+                QStringList fieldvalues = line.split(',', Qt::KeepEmptyParts);
 
 				Contact con;
 

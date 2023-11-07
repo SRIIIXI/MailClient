@@ -9,6 +9,8 @@
 #include "Profile.h"
 #include "Contact.h"
 #include "Mail.h"
+#include "sqlite3.h"
+//#include "sqlite3ext.h"
 
 typedef std::list<std::string> Row;
 typedef std::list<Row> DataSet;
